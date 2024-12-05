@@ -29,7 +29,10 @@ ol {
 
 img {
     display: block;
+    /* може тянутись не більше оріг розміру */
     max-width: 100%;
+    /* збереження пропорцій в різн браузерах */
+    height: auto;
 }
 
 :root {
@@ -377,19 +380,43 @@ textarea {
     padding-bottom: 112px;
 }
 
-@media only screen and (min-width:768px) {
+@media screen and (min-device-pixel-ratio:2),
+screen and (min-resolution:192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bgmob@2x\ \(1\).jpg);
+    }
+}
+
+@media only screen and (min-width:429px) {
     .hero {
         max-width: 768px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bgtab@1x\ \(1\).jpg);
     }
+
+    @media screen and (min-device-pixel-ratio:2),
+    screen and (min-resolution:192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bgtab@2x\ \(1\).jpg);
+        }
+    }
 }
 
-@media only screen and (min-width:1158px) {
+@media only screen and (min-width:769px) {
     .hero {
         max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-office\ 1desk@1x\ \(1\).jpg);
         padding-top: 188px;
         padding-bottom: 188px;
+    }
+
+    @media screen and (min-device-pixel-ratio:2),
+    screen and (min-resolution:192dpi),
+    screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-office\ 1desk@2x\ \(1\).jpg);
+        }
     }
 }
 
@@ -447,57 +474,121 @@ textarea {
 /* section second FEATURES */
 
 .features {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    max-width: 428px;
+    margin: 0 auto;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media screen and (min-width:768px) {
+    .features {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width:1158px) {
+    .features {
+        max-width: 1158px;
+    }
 }
 
 .list.features-list {
     display: flex;
-
-
-
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    row-gap: 72px;
+    column-gap: 24px;
 }
 
 .features-list-item {
-    /* flex-basis: 264px; */
-    /* ширина вьюпорта - двойний проміжок між флекс-елементами ділимо на кільк. елементів */
-    width: calc((100% - 40px) / 3);
+    max-width: 396px;
 }
 
-.features-list-item:not(:last-child) {
-    margin-right: 24px;
+@media screen and (min-width:769px) {
+    .list.features-list {
+
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
 }
+
+@media screen and (min-width:769px) {
+    .features-list-item {
+        /* flex-basis: 356px; */
+        max-width: 356px;
+        /* ширина вьюпорта - двойний проміжок між флекс-елементами ділимо на кільк. елементів */
+        /* width: calc((100% - 40px) / 3); */
+    }
+}
+
+@media screen and (min-width:1159px) {
+    .features-list-item {
+        flex-basis: 264px;
+        /* ширина вьюпорта - двойний проміжок між флекс-елементами ділимо на кільк. елементів */
+        /* width: calc((100% - 40px) / 3); */
+    }
+
+    /* 
+    .features-list-item:not(:last-child) {
+        margin-right: 24px;
+    } */
+}
+
+
 
 .icon-features-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 264px;
-    height: 112px;
-    background-color: var(--CLOUD-color);
-    margin-bottom: 8px;
-    border-radius: 4px;
+    display: none;
 }
 
-/* .icon-features {
-    width: 64px;
-    height: 64px;
-} */
+@media screen and (min-width:1169px) {
+    .icon-features-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 264px;
+        height: 112px;
+        background-color: var(--CLOUD-color);
+        margin-bottom: 8px;
+        border-radius: 4px;
+    }
+}
+
 
 .features-title {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
     letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    text-align: center;
     color: var(--NAVY-BLUE-color);
     margin-bottom: 8px;
 }
 
+@media screen and (min-width:768px) {
+    .features-title {
+        text-align: start;
+    }
+}
+
+@media screen and (min-width:1158px) {
+    .features-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
+
 .features-text {
-    /* font-size: 16px; */
-    /* font-weight: 400; */
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1.5;
     color: var(--SLATE-color);
+    text-align: start;
     letter-spacing: 0.02em;
 }
 
