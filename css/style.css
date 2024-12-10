@@ -101,6 +101,7 @@ textarea {
 
 @media only screen and (min-width:1158px) {
     .container {
+
         max-width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
@@ -594,8 +595,18 @@ screen and (min-resolution: 2dppx) {
 
 /* section third DOING */
 
-.doing {
-    padding-bottom: 120px;
+@media screen and (max-width:1157px) {
+    .doing {
+        display: none
+    }
+}
+
+@media screen and (min-width:1158px) {
+    .doing {
+        max-width: 1158px;
+        margin: 0 auto;
+        padding-bottom: 120px;
+    }
 }
 
 .list.doing-list {
@@ -622,13 +633,39 @@ screen and (min-resolution: 2dppx) {
 /* section four TEAM */
 .team {
     background-color: var(--CLOUD-color);
-    padding-top: 120px;
-    padding-bottom: 120px;
+    max-width: 428px;
+    margin: 0 auto;
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+@media screen and (min-width:768px) {
+    .team {
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width:1158px) {
+    .team {
+        max-width: 1440px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 .list.team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 72px;
+}
+
+@media screen and (min-width:768px) {
+    .team-list {
+        row-gap: 64px;
+        column-gap: 24px;
+    }
 }
 
 .team-title {
