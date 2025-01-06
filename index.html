@@ -112,15 +112,15 @@
                 <h2 class="doing-title">What are we doing</h2>
                 <ul class="list doing-list">
                     <li class="doing-item">
-                        <picture>
+                        <!-- <picture>
                             <source srcset="./images/doing/img1desk-360.webp 1x, ./images/doing/img1desk-720.webp 2x"
                                 type="image/webp">
                             <source srcset="./images/doing/img1desk-360.jpg 1x, ./images/doing/img1desk-720.jpg 2x"
                                 type="image/jpg">
                             <img src="./images/doing/img1desk-360.jpg" alt="pc" width="360" loading="lazy">
-                        </picture>
-                        <!-- <img srcset="/images/doing/img1desk-360.webp 360w, /images/doing/img1desk-720.webp 720w"
-                            src="./images/doing/img1desk-360.webp" alt="pc" sizes="360px" /> -->
+                        </picture> -->
+                        <img srcset="/images/doing/img1desk-360.webp 360w, /images/doing/img1desk-720.webp 720w"
+                            src="./images/doing/img1desk-360.webp" alt="pc" sizes="360px" />
                     </li>
                     <li class="doing-item">
                         <picture>
@@ -154,7 +154,14 @@
                 <h2 class="team-title">Our Team</h2>
                 <ul class="list team-list">
                     <li class="person-card">
-                        <img class="person-img" src="./images/team/max-264.jpg" alt="Mark" width="264" />
+                        <picture>
+                            <source srcset="./images/team/max_mob-264.webp 1x, ./images/team/max_mob-528.webp 2x"
+                                type="image/webp">
+                            <source srcset="./images/team/max-264.jpg 1x, ./images/team/max-528.jpg 2x"
+                                type="image/jpg">
+                            <img class="person-img" src="./images/team/max-264.jpg" alt="Max" width="264" loading="lazy"/>
+                        </picture>
+                        <!-- <img class="person-img" src="./images/team/max-264.jpg" alt="Mark" width="264" /> -->
                         <div class="person-desc">
                             <h3 class="person-name">Mark Guerrero</h3>
                             <p class="person-position">Product Designer</p>
@@ -195,7 +202,11 @@
 
                     </li>
                     <li class="person-card">
-                        <img class="person-img" src="./images/team//tom-264.jpg" alt="Tom" width="264" />
+                        <picture>
+                            <source srcset="./images/team/tom_mob-264.webp 1x, ./images/team/tom_mob-528.webp 2x"
+                                type="image/webp">
+                                <img class="person-img" src="./images/team//tom-264.jpg" alt="Tom" width="264" />
+                        </picture>
                         <div class="person-desc">
                             <h3 class="person-name">Tom Ford</h3>
                             <p class="person-position">Frontend Developer</p>
@@ -236,7 +247,9 @@
 
                     </li>
                     <li class="person-card">
-                        <img class="person-img" src="./images/team/camilla-264.jpg" alt="Camilla" width="264" />
+                        <img class="person-img" 
+                        srcset="./images/team/camilla_mob-264.webp 1x, ./images/team/camilla_mob-528.webp 2x"
+                        src="./images/team/camilla-264.jpg" alt="Camilla" width="264" />
                         <div class="person-desc">
                             <h3 class="person-name">Camila Garcia</h3>
                             <p class="person-position">Marketing</p>
@@ -277,7 +290,9 @@
 
                     </li>
                     <li class="person-card">
-                        <img class="person-img" src="./images/team/dan-264.jpg" alt="Daniel" width="264" />
+                        <img class="person-img" 
+                        srcset="./images/team/dan_mob-264.webp 1x, ./images/team/dan_mob-528.webp 2x"
+                        src="./images/team/dan-264.jpg" alt="Daniel" width="264" />
                         <div class="person-desc">
                             <h3 class="person-name">Daniel Wilson</h3>
                             <p class="person-position">UI Designer</p>
