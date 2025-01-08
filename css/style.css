@@ -124,7 +124,6 @@ textarea {
     justify-content: space-between;
     align-items: center;
     max-width: 428px;
-
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -1079,7 +1078,8 @@ screen and (min-resolution: 2dppx) {
 
 .list.filter {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 24px;
     margin-bottom: 72px;
 
@@ -1141,13 +1141,19 @@ screen and (min-resolution: 2dppx) {
     display: block;
     /* розрахунок ширини флекс елемента  */
     /* 100% - кількість_проміжків_у_рядку * значення_одного_проміжку) / кількість_елементів_у_рядку */
-    width: calc((100% - 48px) / 3);
+    /* width: calc((100% - 48px) / 3); */
+    width: 396px;
     color: rgba(231, 233, 252, 1);
     border: 1px solid var(--CORN-FLOWER-color);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*  */
+@media screen and (min-width:768px) {
+    .card-benefits {
+        width: 356px;
+    }
+    
+}
 
 .overlay-box {
     position: relative;
