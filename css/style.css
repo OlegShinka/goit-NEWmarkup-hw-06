@@ -1084,7 +1084,12 @@ screen and (min-resolution: 2dppx) {
     margin-bottom: 72px;
 
 }
-
+@media screen and (min-width:768px) {
+    .list.filter {
+        justify-content: center;
+    }
+    
+}
 .btn-menu {
     display: block;
     font-family: inherit;
